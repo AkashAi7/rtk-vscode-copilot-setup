@@ -19,33 +19,15 @@ curl -sSL https://raw.githubusercontent.com/rtk-ai/rtk/main/install.sh | bash
 irm https://raw.githubusercontent.com/rtk-ai/rtk/main/install.ps1 | iex
 ``
 
-### 2. Configure GitHub Copilot (Choose One Option)
+### 2. Configure GitHub Copilot (Interactive Setup)
 
-You must tell GitHub Copilot to use tk via Custom Instructions. You can do this globally (for all your projects on this machine) OR per-project (to share with your team).
+You can run our interactive CLI tool securely to set up the configuration either **Globally** (for your entire machine) or **Per-Project** (just inside a single repository).
 
-#### Option A: Global Configuration (Recommended for personal machines)
-This applies the rule across all your VS Code workspaces automatically.
-1. Open VS Code Settings (Ctrl + , or Cmd + ,).
-2. Click the specific **"Open Settings (JSON)"** icon in the top right.
-3. Add the following to your settings.json:
-``json
-{
-  "github.copilot.chat.codeGeneration.instructions": [
-    {
-      "text": "Always prefix terminal commands with tk (e.g., tk npm test or tk git status) to compress output and save tokens. If rtk is not installed, remind the user to install it."
-    }
-  ]
-}
+**Run this in PowerShell:**
+``powershell
+irm https://raw.githubusercontent.com/AkashAi7/rtk-vscode-copilot-setup/master/setup.ps1 | iex
 ``
-
-#### Option B: Per-Project Configuration (Recommended for teams)
-This applies the rule only to the specific project repository, meaning anyone who clones it will also get optimized token usage.
-1. Run this snippet inside the root of your project:
-``bash
-mkdir -p .vscode .github
-curl -sSL https://raw.githubusercontent.com/AkashAi7/rtk-vscode-copilot-setup/master/.github/copilot-instructions.md -o .github/copilot-instructions.md
-curl -sSL https://raw.githubusercontent.com/AkashAi7/rtk-vscode-copilot-setup/master/.vscode/settings.json -o .vscode/settings.json
-``
+*The script will prompt you with an interactive shell window to choose exactly how you want it applied!*
 
 ### 3. See it in Action
 Open VS Code GitHub Copilot Chat and ask:
