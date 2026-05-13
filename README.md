@@ -2,12 +2,12 @@
 
 This is a ready-to-use template that optimizes **GitHub Copilot in VS Code** using [RTK (Rust Token Killer)](https://github.com/rtk-ai/rtk). 
 
-`rtk` is a proxy that filters terminal commands directly, compressing the noisy output before it reaches the Copilot LLM. This saves **60-90%** in tokens, preventing context window bloat and improving Copilot's reasoning.
+tk is a proxy that filters terminal commands directly, compressing the noisy output before it reaches the Copilot LLM. This saves **60-90%** in tokens, preventing context window bloat and improving Copilot's reasoning.
 
 ## 🚀 Easy Installation Guide
 
 ### 1. Install RTK (Command Line Tool)
-Open your VS Code terminal and install `rtk`:
+Open your VS Code terminal and install tk:
 
 **macOS/Linux:**
 `ash
@@ -30,7 +30,7 @@ curl -sSL https://raw.githubusercontent.com/AkashAi7/rtk-vscode-copilot-setup/ma
 
 **Windows (PowerShell):**
 `powershell
-irm https://raw.githubusercontent.com/AkashAi7/rtk-vscode-copilot-setup/master/setup.ps1 | iex
+irm https://raw.githubusercontent.com/AkashAi7/rtk-vscode-copilot-setup/master/setup.ps1 -OutFile setup.ps1; .\setup.ps1
 `
 *The script will prompt you with an interactive shell window to choose exactly how you want it applied!*
 
@@ -38,7 +38,7 @@ irm https://raw.githubusercontent.com/AkashAi7/rtk-vscode-copilot-setup/master/s
 Open VS Code GitHub Copilot Chat and ask:
 > "Run my tests to see what failed"
 
-Copilot will automatically run `rtk npm test` (or cargo, pytest, etc.), receiving only the intelligently filtered output.
+Copilot will automatically run tk npm test (or cargo, pytest, etc.), receiving only the intelligently filtered output.
 
 ---
 
@@ -53,6 +53,6 @@ curl -sSL https://raw.githubusercontent.com/AkashAi7/rtk-vscode-copilot-setup/ma
 
 **Windows (PowerShell):**
 `powershell
-irm https://raw.githubusercontent.com/AkashAi7/rtk-vscode-copilot-setup/master/uninstall.ps1 | iex
+irm https://raw.githubusercontent.com/AkashAi7/rtk-vscode-copilot-setup/master/uninstall.ps1 -OutFile uninstall.ps1; .\uninstall.ps1
 `
 *It will ask if you want to remove the setup Globally or from the current Project folder.*
