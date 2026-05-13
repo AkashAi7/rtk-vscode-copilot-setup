@@ -23,7 +23,12 @@ irm https://raw.githubusercontent.com/rtk-ai/rtk/main/install.ps1 | iex
 
 You can run our interactive CLI tool securely to set up the configuration either **Globally** (for your entire machine) or **Per-Project** (just inside a single repository).
 
-**Run this in PowerShell:**
+**macOS/Linux:**
+`ash
+curl -sSL https://raw.githubusercontent.com/AkashAi7/rtk-vscode-copilot-setup/master/setup.sh | bash
+`
+
+**Windows (PowerShell):**
 `powershell
 irm https://raw.githubusercontent.com/AkashAi7/rtk-vscode-copilot-setup/master/setup.ps1 | iex
 `
@@ -41,7 +46,12 @@ Copilot will automatically run `rtk npm test` (or cargo, pytest, etc.), receivin
 
 If you ever want to remove these custom instructions, you can run the interactive uninstaller:
 
-**Run this in PowerShell:**
+**macOS/Linux:**
+`ash
+curl -sSL https://raw.githubusercontent.com/AkashAi7/rtk-vscode-copilot-setup/master/uninstall.sh | bash
+`
+
+**Windows (PowerShell):**
 `powershell
 irm https://raw.githubusercontent.com/AkashAi7/rtk-vscode-copilot-setup/master/uninstall.ps1 | iex
 `
